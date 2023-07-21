@@ -3,13 +3,13 @@ package io.kotest.inspectors
 import io.kotest.assertions.ErrorCollectionMode
 import io.kotest.assertions.errorCollector
 
-inline fun <T> runTests(col: Collection<T>, f: (T) -> Unit): List<ElementResult<T>> {
+internal inline fun <T> runTests(col: Collection<T>, f: (T) -> Unit): List<ElementResult<T>> {
    return col.mapIndexed { index, it ->
       runTest(index, it, f)
    }
 }
 
-inline fun <K, V, T : Map.Entry<K, V>> runTests(
+internal inline fun <K, V, T : Map.Entry<K, V>> runTests(
    map: Map<K, V>,
    f: (Map.Entry<K, V>) -> Unit
 ): List<ElementResult<Map.Entry<K, V>>> {
@@ -18,7 +18,7 @@ inline fun <K, V, T : Map.Entry<K, V>> runTests(
    }
 }
 
-inline fun <T> runTest(index: Int, t: T, f: (T) -> Unit): ElementResult<T> {
+internal inline fun <T> runTest(index: Int, t: T, f: (T) -> Unit): ElementResult<T> {
    val originalAssertionMode = errorCollector.getCollectionMode()
    return try {
       errorCollector.setCollectionMode(ErrorCollectionMode.Hard)

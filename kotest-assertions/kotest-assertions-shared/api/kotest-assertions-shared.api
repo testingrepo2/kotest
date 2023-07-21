@@ -2834,32 +2834,6 @@ public final class io/kotest/equals/types/ObjectEqualsEqualityKt {
 	public static synthetic fun byObjectEquality$default (Lio/kotest/equals/Equality$Companion;ZILjava/lang/Object;)Lio/kotest/equals/types/ObjectEqualsEquality;
 }
 
-public final class io/kotest/inspectors/ElementFail : io/kotest/inspectors/ElementResult {
-	public fun <init> (ILjava/lang/Object;Ljava/lang/Throwable;)V
-	public fun error ()Ljava/lang/Throwable;
-	public final fun getIndex ()I
-	public final fun getT ()Ljava/lang/Object;
-	public final fun getThrowable ()Ljava/lang/Throwable;
-	public fun value ()Ljava/lang/Object;
-}
-
-public final class io/kotest/inspectors/ElementPass : io/kotest/inspectors/ElementResult {
-	public fun <init> (ILjava/lang/Object;)V
-	public fun error ()Ljava/lang/Throwable;
-	public final fun getIndex ()I
-	public final fun getT ()Ljava/lang/Object;
-	public fun value ()Ljava/lang/Object;
-}
-
-public abstract class io/kotest/inspectors/ElementResult {
-	public abstract fun error ()Ljava/lang/Throwable;
-	public abstract fun value ()Ljava/lang/Object;
-}
-
-public final class io/kotest/inspectors/ErrorKt {
-	public static final fun buildAssertionError (Ljava/lang/String;Ljava/util/List;)Ljava/lang/Void;
-}
-
 public final class io/kotest/inspectors/InspectorAliasesKt {
 	public static final fun shouldForAll (Ljava/util/Collection;Lkotlin/jvm/functions/Function1;)Ljava/util/Collection;
 	public static final fun shouldForAll (Lkotlin/sequences/Sequence;Lkotlin/jvm/functions/Function1;)Lkotlin/sequences/Sequence;
@@ -2967,12 +2941,6 @@ public final class io/kotest/inspectors/InspectorsKt {
 	public static final fun forValuesAtLeast (Ljava/util/Map;ILkotlin/jvm/functions/Function1;)Ljava/util/Map;
 	public static final fun forValuesAtMost (Ljava/util/Map;ILkotlin/jvm/functions/Function1;)Ljava/util/Map;
 	public static final fun forValuesExactly (Ljava/util/Map;ILkotlin/jvm/functions/Function1;)Ljava/util/Map;
-}
-
-public final class io/kotest/inspectors/RunTestsKt {
-	public static final fun runTest (ILjava/lang/Object;Lkotlin/jvm/functions/Function1;)Lio/kotest/inspectors/ElementResult;
-	public static final fun runTests (Ljava/util/Collection;Lkotlin/jvm/functions/Function1;)Ljava/util/List;
-	public static final fun runTests (Ljava/util/Map;Lkotlin/jvm/functions/Function1;)Ljava/util/List;
 }
 
 public final class io/kotest/matchers/ShouldKt {

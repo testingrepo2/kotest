@@ -17,7 +17,7 @@ import io.kotest.assertions.print.print
  *     -Dkotest.assertions.output.max=20
  * ```
  */
-fun <T> buildAssertionError(msg: String, results: List<ElementResult<T>>): Nothing {
+internal fun <T> buildAssertionError(msg: String, results: List<ElementResult<T>>): Nothing {
 
    val maxResults = AssertionsConfig.maxErrorsOutput
 
@@ -38,7 +38,7 @@ fun <T> buildAssertionError(msg: String, results: List<ElementResult<T>>): Nothi
          } else {
             passed.take(maxResults)
                .forEach {
-                  appendLine("  [${it.index}] ${it.t}") // Why not print().value??
+                  appendLine("  [${it.index}] ${it.value}") // Why not print().value??
                }
 
             if (passed.size > maxResults) {
@@ -56,7 +56,7 @@ fun <T> buildAssertionError(msg: String, results: List<ElementResult<T>>): Nothi
          } else {
             failed.take(maxResults)
                .forEach {
-                  appendLine("  [${it.index}] ${it.t.print().value} => ${exceptionToMessage(it.throwable)}")
+                  appendLine("  [${it.index}] ${it.value.print().value} => ${exceptionToMessage(it.error)}")
                }
 
             if (failed.size > maxResults) {
