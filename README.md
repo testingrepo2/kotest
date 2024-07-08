@@ -9,7 +9,7 @@
 [![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/kotest/kotest.svg)](https://isitmaintained.com/project/kotest/kotest "Average time to resolve an issue")
 [<img src="https://img.shields.io/nexus/snapshots/https/s01.oss.sonatype.org/io.kotest/kotest-framework-api.svg?label=latest%20snapshot"/>](https://s01.oss.sonatype.org/content/repositories/snapshots/io/kotest/)
 
-__Kotest is a flexible and comprehensive testing tool for [Kotlin](https://kotlinlang.org/) with multiplatform support.__
+__Kotest is a flexible and comprehensive testing tool for [Kotlin](https://kotlinlang.org/) with multiplatform support.__ 
 
 To learn more about Kotest, visit [kotest.io](https://kotest.io) or see our [quick start](https://kotest.io/docs/quickstart/) guide.
 Looking to upgrade? - see the [changelog](https://kotest.io/docs/next/changelog.html)
